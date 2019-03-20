@@ -114,6 +114,10 @@ module.exports = {
           if (value.length > limit) {
             return `Exceed limit: ${limit}`;
           }
+          if (value.length < 1) {
+            //强制一定要描述修改
+            return 'Exceed 1 at least';
+          }
           return true;
         },
         filter(value) {
